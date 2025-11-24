@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Green Hills Events</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: #ffffff;
+    margin: 0;
+    padding: 20px;
+  }
+
+  .hero-image {
+    width: 100%;
+    height: 450px;
+    background: url('./assets/hero.jpg') no-repeat center center;
+    background-size: cover;
+    margin-bottom: 20px;
+    border-radius: 10px;
+  }
+
+  /* Buttons - smaller size */
+  .btn {
+    padding: 6px 12px; 
+    font-size: 0.9em;
+    margin: 5px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  .btn:hover {
+    background-color: #0056b3;
+  }
+
+  .hidden { display: none; }
+
+  #careerMessage {
+    background: #2ecc71;
+    color: black;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  }
+
+  /* Cards container */
+  .cards-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+  }
+
+  .card {
+    background: #2ecc71;
+    color: black;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+
+  .date { font-size: 0.9em; color: black; }
+  .description { margin: 10px 0; color: black; flex-grow: 1; }
+
+    .view-more {
+        align-self: flex-start;
+        padding: 6px 12px;
+        font-size: 0.9em;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        text-decoration: none;
+    }
+  #calendar {
+    background: #2ecc71;
+    color: black;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .cards-container .card:last-child {
+    grid-column: auto;
+  }
+
+  @media (max-width: 768px) {
+    .cards-container {
+      grid-template-columns: 1fr;
+      gap: 15px;
+    }
+    .cards-container .card:last-child {
+      grid-column: auto;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="hero-image"></div>
+
+
+<button class="btn" id="careerBtn">Career</button>
+<button class="btn" id="newsBtn">News & Events</button>
+<button class="btn" id="calendarBtn">Open Calendar</button>
+
+<!-- Career Section -->
+<div id="careerMessage" class="hidden">
+  <h2>Available Vacancy</h2>
+  <p>Find The One That’s Right For You</p>
+</div>
+
+<!-- News & Events Section -->
+<div id="newsContainer" class="cards-container hidden">
+  <div class="card">
+    <img src="./images/st3.jpg" alt="Conference">
+    <h3>Green Hills Academy Hosts #InnovateEdu Africa Conference</h3>
+    <p class="date">Apr 9 2024</p>
+    <p class="description">Green Hills Academy had the privilege of hosting the #InnovateEdu Africa conference...</p>
+    <button class="view-more">View More</button>
+  </div>
+
+  <div class="card">
+    <img src="./images/st6.png" alt="Breast Cancer Awareness">
+    <h3>Pink Day and Bake Sale for Breast Cancer Awareness</h3>
+    <p class="date">Apr 9 2024</p>
+    <p class="description">Green Hills Academy stood together during Breast Cancer Awareness Month...</p>
+    <button class="view-more">View More</button>
+  </div>
+
+  <div class="card">
+    <img src="./images/st1.jpg" alt="LEAP Rwanda">
+    <h3>LEAP Rwanda 2024: Empowering Young Entrepreneurs</h3>
+    <p class="date">Apr 9 2024</p>
+    <p class="description">Following the success of LEAP Rwanda 2023, Green Hills Academy continues to empower young entrepreneurs...</p>
+    <button class="view-more">View More</button>
+  </div>
+
+  <div class="card">
+    <img src="./images/st7.png" alt="Heritage Day">
+    <h3>Celebrating Heritage Day</h3>
+    <p class="date">Apr 9 2024</p>
+    <p class="description">Our Heritage Day celebrations were a testament to our inclusive community...</p>
+    <button class="view-more">View More</button>
+  </div>
+
+  <div class="card">
+    <img src="./images/st5.jpg" alt="IBCP Program">
+    <h3>GHA Launches Exciting Chapter: Now Authorized to Offer IBCP</h3>
+    <p class="date">Apr 9 2024</p>
+    <p class="description">Green Hills Academy is now authorized to offer the International Baccalaureate Career-related Program (IBCP)...</p>
+    <button class="view-more">View More</button>
+  </div>
+</div>
+
+<!-- Calendar Section -->
+<div id="calendar" class="hidden">
+  <h2>Calendar</h2>
+  <p>Here is the calendar of upcoming events:</p>
+  <ul>
+    <li>Apr 10 2024: Science Fair</li>
+    <li>Apr 15 2024: Sports Day</li>
+    <li>Apr 20 2024: Parent-Teacher Meeting</li>
+    <li>Apr 25 2024: Graduation Ceremony</li>
+  </ul>
+</div>
+
+<script>
+const careerBtn = document.getElementById('careerBtn');
+const newsBtn = document.getElementById('newsBtn');
+const calendarBtn = document.getElementById('calendarBtn');
+
+const careerMessage = document.getElementById('careerMessage');
+const newsContainer = document.getElementById('newsContainer');
+const calendar = document.getElementById('calendar');
+
+function hideAll() {
+  careerMessage.classList.add('hidden');
+  newsContainer.classList.add('hidden');
+  calendar.classList.add('hidden');
+}
+
+careerBtn.addEventListener('click', () => {
+  hideAll();
+  careerMessage.classList.remove('hidden');
+});
+
+newsBtn.addEventListener('click', () => {
+  hideAll();
+  newsContainer.classList.remove('hidden');
+});
+
+calendarBtn.addEventListener('click', () => {
+  hideAll();
+  calendar.classList.remove('hidden');
+});
+</script>
+
+</body>
+</html>
