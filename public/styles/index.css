@@ -926,3 +926,201 @@ body{font-family:Inter, "Segoe UI", Roboto, sans-serif;background:#fff;color:var
         font-size: 18px;
     }
 }
+.logos img {
+    width: 150px;
+    height: 150px;
+}
+
+.logos1 img {
+    height: 150px;
+}
+
+.logos_hero {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    margin-inline: auto;
+}
+.line{
+    border-left:4px solid rgb(20,134,96);
+    height: 20px;
+    margin: 0 15px;
+}
+.reach {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.reach h1 {
+    font-size: 36px;
+    color: rgb(20, 134, 96);
+    margin-bottom: 10px;
+}
+
+.reach .p {
+    font-size: 18px;
+    color: rgb(20, 134, 96);
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 40px;
+}
+
+.contact_form {
+    width: 90%;
+    margin: 40px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    padding: 40px;
+}
+
+.schedule {
+    width: 40%;
+}
+
+.schedule h2 {
+    color: rgb(20, 134, 96);
+    margin-bottom: 15px;
+}
+
+.info {
+    margin-bottom: 15px;
+}
+
+.info h3 {
+    color: rgb(20, 134, 96);
+    margin-bottom: 8px;
+}
+
+.info p {
+    color: black;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.query_form {
+    width: 60%;
+}
+.query_form h2 {
+    color: rgb(20, 134, 96);
+    margin-bottom: 15px;
+    text-align: left;
+    margin-left: 18px;
+}
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 25px;
+   
+    border-radius: 10px;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+label {
+    color: black;
+    font-size: 15px;
+}
+
+input,
+textarea {
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid rgb(20, 134, 96);
+    outline: none;
+    font-size: 15px;
+}
+
+textarea {
+    height: 100px;
+    resize: none;
+}
+
+button[type="submit"] {
+    padding: 12px;
+    background: rgb(20, 134, 96);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 200px;
+    transition: 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background: rgb(16, 110, 78);
+}
+/* contact form responsive design */
+@media (max-width: 900px) {
+    .reach .p {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        padding: 20px;
+    }
+
+    .line {
+        height: 20px;
+        width: 0;
+        border-left: 3px solid rgb(20, 134, 96);
+        margin: 0;
+    }
+
+    .contact_form {
+        flex-direction: column;
+        gap: 30px;
+        padding: 20px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .schedule,
+    .query_form {
+        width: 100%;
+    }
+
+    .query_form h2 {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .form {
+        width: 100%;
+        padding: 20px;
+    }
+
+    button[type="submit"] {
+        width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .reach h1 {
+        font-size: 28px;
+    }
+
+    .logos img,
+    .logos1 img {
+        height: 100px;
+        width: auto;
+    }
+
+    .logos_hero {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .reach .p {
+        font-size: 16px;
+    }
+}
