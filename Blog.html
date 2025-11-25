@@ -4,12 +4,18 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Green Hills Events</title>
+<link rel="stylesheet" href="/public/styles/index.css">
 <style>
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Comfortaa', sans-serif;
+}
   body {
     font-family: Arial, sans-serif;
     background: #ffffff;
     margin: 0;
-    padding: 20px;
   }
 
   .hero-image {
@@ -119,6 +125,31 @@
 </head>
 <body>
 
+      <header>
+        <nav class="nav">
+            <div class="nav-container">
+                <ul class="links">
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#admission">Admission</a></li>
+                    <li><a href="#boarding">Boarding</a></li>
+                    <li><a href="Blog.html">News&Events</a></li>
+                    <li><a href="contacts.html">Contact Us</a></li> 
+                    <li><a href="#apply" class="apply-btn">Apply</a></li>                   
+
+                </ul>
+
+                <div class="cta">
+                    <button>Login</button>
+                    <button>Register</button>
+                </div>
+                <div class="menu-toggle">&#9776;</div>
+
+            </div>
+        </nav>
+    </header>
+
 <div class="hero-image"></div>
 
 
@@ -126,16 +157,14 @@
 <button class="btn" id="newsBtn">News & Events</button>
 <button class="btn" id="calendarBtn">Open Calendar</button>
 
-<!-- Career Section -->
 <div id="careerMessage" class="hidden">
   <h2>Available Vacancy</h2>
   <p>Find The One That’s Right For You</p>
 </div>
 
-<!-- News & Events Section -->
 <div id="newsContainer" class="cards-container hidden">
   <div class="card">
-    <img src="./images/st3.jpg" alt="Conference">
+    <img src="public/images/scholar.jpg" alt="Conference">
     <h3>Green Hills Academy Hosts #InnovateEdu Africa Conference</h3>
     <p class="date">Apr 9 2024</p>
     <p class="description">Green Hills Academy had the privilege of hosting the #InnovateEdu Africa conference...</p>
@@ -143,7 +172,7 @@
   </div>
 
   <div class="card">
-    <img src="./images/st6.png" alt="Breast Cancer Awareness">
+    <img src="/public/images/books.jpg" alt="Breast Cancer Awareness">
     <h3>Pink Day and Bake Sale for Breast Cancer Awareness</h3>
     <p class="date">Apr 9 2024</p>
     <p class="description">Green Hills Academy stood together during Breast Cancer Awareness Month...</p>
@@ -151,7 +180,7 @@
   </div>
 
   <div class="card">
-    <img src="./images/st1.jpg" alt="LEAP Rwanda">
+    <img src="/public/images/sport.jpg" alt="LEAP Rwanda">
     <h3>LEAP Rwanda 2024: Empowering Young Entrepreneurs</h3>
     <p class="date">Apr 9 2024</p>
     <p class="description">Following the success of LEAP Rwanda 2023, Green Hills Academy continues to empower young entrepreneurs...</p>
@@ -159,7 +188,7 @@
   </div>
 
   <div class="card">
-    <img src="./images/st7.png" alt="Heritage Day">
+    <img src="/public/images/scholar.jpg" alt="Heritage Day">
     <h3>Celebrating Heritage Day</h3>
     <p class="date">Apr 9 2024</p>
     <p class="description">Our Heritage Day celebrations were a testament to our inclusive community...</p>
@@ -167,7 +196,7 @@
   </div>
 
   <div class="card">
-    <img src="./images/st5.jpg" alt="IBCP Program">
+    <img src="/public/images/sport.jpg" alt="IBCP Program">
     <h3>GHA Launches Exciting Chapter: Now Authorized to Offer IBCP</h3>
     <p class="date">Apr 9 2024</p>
     <p class="description">Green Hills Academy is now authorized to offer the International Baccalaureate Career-related Program (IBCP)...</p>
@@ -175,7 +204,6 @@
   </div>
 </div>
 
-<!-- Calendar Section -->
 <div id="calendar" class="hidden">
   <h2>Calendar</h2>
   <p>Here is the calendar of upcoming events:</p>
