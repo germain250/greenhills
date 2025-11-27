@@ -1,0 +1,333 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Comfortaa', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+
+}
+
+header{
+    position: sticky;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(20px);
+    background-color: rgb(20, 134, 96);
+    transition: background-color 0.4s ease;
+}
+
+.nav{
+    width: 100%;
+    max-width: 90%;
+    margin-inline: auto;
+}
+
+.nav-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 0;
+}
+
+
+.links{
+    display: flex;
+    list-style: none;
+}
+
+.links li a{
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+    transition: 0.3s ease;
+}
+
+.links li a.active {
+    text-decoration: underline;
+    text-decoration-color: #F9D904;
+    text-decoration-thickness: 3px;
+    font-weight: 800;
+}
+
+.links li a:hover{
+    color: #F9D904;
+}
+
+.cta{
+    display: flex;
+    gap: 12px;
+}
+
+.cta button{
+    padding: 10px 16px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.cta button:hover{
+    background-color: #F9D904;
+}
+
+.apply-btn {
+    border: 2px solid white;
+    border-radius: 20px;
+    padding: 12px 20px;
+
+}
+
+
+
+
+
+
+/* ================================
+   ADMISSIONS HERO (FULL SCREEN)
+================================ */
+
+.admissions-hero {
+  position: relative;
+  width: 100%;
+  height: 50vh; /* full screen */
+  overflow: hidden;
+}
+
+.admissions-hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* keeps image looking perfect */
+}
+
+.admissions-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.35); /* darken effect */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+.admissions-hero-overlay h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+
+/* ================================
+   ADMISSIONS BODY SECTION
+   (4 PHOTOS + TEXT)
+================================ */
+
+.student-showcase {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;   /* <—— makes text and images align at the top */
+    max-width: 1100px;
+    margin: 15px auto;
+    padding: 20px;
+    gap: 40px;
+}
+
+
+/* TEXT ON LEFT */
+.showcase-text {
+    flex: 1;
+}
+
+.showcase-text h2 {
+    color: #006400;
+    margin-bottom: 10px;
+}
+
+.showcase-text p {
+    font-size: 18px;   /* increase paragraph size */
+    line-height: 1.6;  /* makes it easier to read */
+}
+
+
+/* 2×2 GRID OF PHOTOS ON RIGHT */
+.photos-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);  /* 2 × 2 */
+    gap: 10px;
+    flex: 1;
+}
+
+.photos-grid img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.full-image-section {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* FULL SCREEN HEIGHT */
+    overflow: hidden;
+}
+
+.full-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.full-image-text {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    text-align: center;
+    width: 80%;
+}
+
+.full-image-text h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.full-image-text p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+
+
+
+/* ================================
+   FULL SCREEN IMAGE SECTION
+================================ */
+.full-image-section {
+    position: relative;
+    width: 100vw;      /* full screen width */
+    height: 100vh;     /* full screen height */
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.full-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.full-image-text {
+    position: absolute;
+    top: 50%;               /* center vertically */
+    left: 50%;              /* center horizontally */
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    width: 80%;
+}
+
+.full-image-text h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.full-image-text p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+
+
+/* ================================
+   BODY SECTION: TEXT + 2 IMAGES
+================================ */
+
+.two-image-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    gap: 40px;
+}
+
+/* Text takes 50% */
+.text-box {
+    flex: 1;
+    margin-top: -20px;
+}
+
+/* Two photos next to each other */
+.image-box {
+    flex: 1;
+    display: flex;
+    flex-direction: row;   /* <-- THIS MAKES IMAGES GO SIDE BY SIDE */
+    gap: 15px;
+}
+
+/* Each image takes 50% of its box */
+.image-box img {
+    width: 50%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* If you want first image slightly higher */
+.img-one {
+    margin-top: -20px;
+}
+
+/* Slightly lower second image */
+.img-two {
+    margin-top: 20px;
+}
+
+/* Mobile (images below text) */
+@media (max-width: 768px) {
+    .two-image-section {
+        flex-direction: column;
+    }
+    
+    .image-box {
+        flex-direction: column;
+    }
+
+    .image-box img {
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+/* MOBILE FIX */
+@media (max-width: 768px) {
+    .challenge-section {
+        flex-direction: column;
+    }
+}
+
+
+
+
