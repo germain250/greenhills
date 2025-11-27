@@ -12,6 +12,11 @@
     box-sizing: border-box;
     font-family: 'Comfortaa', sans-serif;
 }
+.btn-container{
+  width: 60%;
+  margin-inline: auto;
+  justify-content: center;
+}
   body {
     font-family: Arial, sans-serif;
     background: #ffffff;
@@ -27,12 +32,11 @@
     border-radius: 10px;
   }
 
-  /* Buttons - smaller size */
   .btn {
     padding: 6px 12px; 
     font-size: 0.9em;
     margin: 5px;
-    background-color: #007bff;
+    background-color: green;
     color: white;
     border: none;
     cursor: pointer;
@@ -40,7 +44,7 @@
   }
 
   .btn:hover {
-    background-color: #0056b3;
+    background-color: #F9D904;
   }
 
   .hidden { display: none; }
@@ -89,7 +93,7 @@
         align-self: flex-start;
         padding: 6px 12px;
         font-size: 0.9em;
-        background-color: #007bff;
+        background-color: green;
         color: white;
         border: none;
         cursor: pointer;
@@ -116,6 +120,7 @@
     .cards-container {
       grid-template-columns: 1fr;
       gap: 15px;
+      padding: 20px;
     }
     .cards-container .card:last-child {
       grid-column: auto;
@@ -149,13 +154,11 @@
             </div>
         </nav>
     </header>
-
-<div class="hero-image"></div>
-
-
-<button class="btn" id="careerBtn">Career</button>
+    <div class="btn-container">
+      <button class="btn" id="careerBtn">Career</button>
 <button class="btn" id="newsBtn">News & Events</button>
 <button class="btn" id="calendarBtn">Open Calendar</button>
+    </div>
 
 <div id="careerMessage" class="hidden">
   <h2>Available Vacancy</h2>
